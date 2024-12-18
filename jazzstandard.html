@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Jazz Standards | jurin-n's page
+        </title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFBDP2LT79"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-HFBDP2LT79');
+        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <div class="container">
+            <p id="song-name" class="h1"></p>
+            <p class="h5">track list</p>
+            <table id="track-list" class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">track name</th>
+                        <th scope="col">album name</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <script>
+            var searchParams = new URLSearchParams(window.location.search);
+            $.ajax({
+                url:'https://cic7h7cdab.execute-api.ap-northeast-1.amazonaws.com/prod/songs?id='+searchParams.get("id")
+            }).done(function( response ) {
+                let song_name = response['song_name']
+                $('#song-name').append(song_name)
+                let tracks = response['tracks']
+                for (let i in tracks) {
+                    /*
+                    $('#track-list').append(
+                        $('<li>').append(
+                            $('<a>').attr('href','track.html?id='+tracks[i]['id']).append(
+                                $('<span>').attr('class', 'track-name').append(tracks[i]['name']+':'+tracks[i]['album_name'])
+                    )));
+                    */
+                    let index = parseInt(i)+1
+                    $("#track-list").find('tbody').append('<tr><td>' + index +'</td><td>'+tracks[i]['name']+'</td><td>'+tracks[i]['album_name']+'</td></tr>');
+                }
+            }
+            )
+        </script>
+    </body>
+</html>

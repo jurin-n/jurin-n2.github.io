@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Jazz Standards | jurin-n's page
+        </title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFBDP2LT79"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-HFBDP2LT79');
+        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Jazz Standards</h1>
+            <div>
+                <ul id="song-list">
+                </ul>
+            </div>
+        </div>
+        <script>
+            $.ajax({
+                url:'https://cic7h7cdab.execute-api.ap-northeast-1.amazonaws.com/prod/songs'
+            }).done(function( response ) {
+                let songs = response['songs']
+                for (let i in songs) {
+                    console.log(songs[i]['id']+':'+songs[i]['name'])
+                    $('#song-list').append(
+                        $('<li>').append(
+                            $('<a>').attr('href','jazzstandard.html?id='+songs[i]['id']).append(
+                                $('<span>').attr('class', 'song-name').append(songs[i]['name'])
+                    )));
+                }
+            }
+            )
+        </script>
+    </body>
+</html>

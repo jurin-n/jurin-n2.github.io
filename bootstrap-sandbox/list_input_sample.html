@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Bootstrap 4 sandbox | list input sample
+        </title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFBDP2LT79"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-HFBDP2LT79');
+        </script>
+        <link rel="stylesheet" href="../bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            .jurin-n-submit-button {
+                height: 2.5rem;
+                width: 7rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="mb-3 py-1 bg-light">
+            <div class="container">
+                <h1>
+                    一覧形式の入力フォーム divタグで作ったバージョン
+                </h1>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="item-columns">アイテム項目</label>
+                        <div id="item-columns">
+                            <div class="item-columns-header border-top border-bottom border-light-2">
+                                <div class="row py-3">
+                                    <div class="col-2 col-lg-1">
+                                        No
+                                    </div>
+                                    <div class="col-3 col-lg-4">
+                                        項目ID
+                                    </div>
+                                    <div class="col">
+                                        項目名
+                                    </div>
+                                    <div class="col">
+                                        型
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-columns-body mb-3">
+                                <div class="row my-1">
+                                    <div class="col-2 col-lg-1">
+                                        <input type="text" name="xxx-r1-ItemNo" value="1" class="form-control form-control-sm" />
+                                    </div>
+                                    <div class="col-3 col-lg-4">
+                                        <input type="text" name="xxx-r1-ItemId" value="ID0001-000000001" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="xxx-r1-ItemName" value="ユーザIDあああああああああ" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <select name="xxx-r1-ItemType" class="form-control form-control-sm">
+                                            <option value="String" selected>String</option>
+                                            <option value="Integer">Integer</option>
+                                        </select>                            
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-2 col-lg-1">
+                                        <input type="text" name="xxx-r2-ItemNo" value="2" class="form-control form-control-sm" />
+                                    </div>
+                                    <div class="col-3 col-lg-4">
+                                        <input type="text" name="xxx-r2-ItemId" value="ID0002-000000001" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="xxx-r2-ItemName" value="ユーザIDいいいいいいい" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <select name="xxx-r2-ItemType" class="form-control form-control-sm">
+                                            <option value="String">String</option>
+                                            <option value="Integer" selected>Integer</option>
+                                        </select>                            
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-2 col-lg-1">
+                                        <input type="text" name="xxx-r3-ItemNo" value="3" class="form-control form-control-sm" />
+                                    </div>
+                                    <div class="col-3 col-lg-4">
+                                        <input type="text" name="xxx-r3-ItemId" value="ID0003-000000001" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="xxx-r3-ItemName" value="ユーザIDうううううう" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <select name="xxx-r3-ItemType" class="form-control form-control-sm">
+                                            <option value="String" selected>String</option>
+                                            <option value="Integer">Integer</option>
+                                        </select>                            
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-2 col-lg-1">
+                                        <input type="text" name="xxx-r4-ItemNo" value="" class="form-control form-control-sm" />
+                                    </div>
+                                    <div class="col-3 col-lg-4">
+                                        <input type="text" name="xxx-r4-ItemId" value="" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="xxx-r4-ItemName" value="" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <select name="xxx-r4-ItemType" class="form-control form-control-sm">
+                                            <option value="String">String</option>
+                                            <option value="Integer">Integer</option>
+                                        </select>                            
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-2 col-lg-1">
+                                        <input type="text" name="xxx-r5-ItemNo" value="" class="form-control form-control-sm" />
+                                    </div>
+                                    <div class="col-3 col-lg-4">
+                                        <input type="text" name="xxx-r5-ItemId" value="" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="xxx-r5-ItemName" value="" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <select name="xxx-r5-ItemType" class="form-control form-control-sm">
+                                            <option value="String">String</option>
+                                            <option value="Integer">Integer</option>
+                                        </select>                            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-columns-footer">
+                                <div id="parent-of-addrow" class="parent-of-addrow">
+                                    <a id="item-columns-addrow" class="btn btn-outline-primary btn-sm">
+                                        + Add 5 rows
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-column-template d-none">
+                                <div class="row my-1">
+                                    <div class="col-2 col-lg-1">
+                                        <input type="text" name="xxx-rnnn-ItemNo" value="" class="form-control form-control-sm" />
+                                    </div>
+                                    <div class="col-3 col-lg-4">
+                                        <input type="text" name="xxx-rnnn-ItemId" value="" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="xxx-rnnn-ItemName" value="" class="form-control form-control-sm"/>
+                                    </div>
+                                    <div class="col">
+                                        <select name="xxx-r4-ItemType" class="form-control form-control-sm">
+                                            <option value="String">String</option>
+                                            <option value="Integer">Integer</option>
+                                        </select>                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-5">
+                            <button class="btn btn-primary jurin-n-submit-button">登録</button>
+                            <button class="btn btn-secondary jurin-n-submit-button">キャンセル</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <script src="../js/jquery-3.5.1.min.js"></script>
+        <script src="../bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            // Add Rowボタンの処理
+            $( "#item-columns>.item-columns-footer a" ).on( "click", function() {
+                //テンプレート取得
+                let template = $(this)
+                                .parent()
+                                    .parent()
+                                        .parent()
+                                            .children(".item-column-template")
+                                                .children()
+                                                    .clone();
+
+                //テンプレート加工
+                let count = $(this)
+                                .parent()
+                                    .parent()
+                                        .parent()
+                                            .children(".item-columns-body")
+                                                .children().length;
+                for (let i = 0; i < 5; i++) {
+                    let newIndex = count + i + 1;
+                    let newItem = template.clone();
+
+                    newItem.find("[name^='xxx-rnnn-']").each(function(){
+                        $(this).attr('name',$(this).attr('name').replace('xxx-rnnn-','xxx-r'+newIndex.toString() +'-'));
+                    });
+                    //テンプレートを一覧の下に挿入
+                    $(this)
+                        .parent()
+                            .parent()
+                                .parent()
+                                    .children(".item-columns-body")
+                                        .append(newItem);
+                }
+            });
+        </script>
+    </body>
+</html>
